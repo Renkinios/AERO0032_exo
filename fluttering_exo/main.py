@@ -2,6 +2,7 @@
 import matrix_implement as mt
 import scalar_implement as st
 import FindFlutterSpeed as ff
+import plot_graph as pg
 import numpy as np
 
 c                      = 0.25  # [m]
@@ -31,5 +32,10 @@ matrix_C = np.zeros((2, 2))
 start_speed = 5 
 speed_fluter = ff.FindFlutterSpeed(matrix_A, matrix_B, matrix_C, matrix_D, matrix_E, matrix_F, start_speed, rho_air)
 print("speed fluter : \t", speed_fluter)
+
+pg.plot_pulsationAndDamping2speed(omega_alpha_0, omega_h_0, matrix_A, matrix_B, matrix_C, matrix_D, matrix_E, matrix_F, rho_air, speed_fluter)
+
+
+
 
 
